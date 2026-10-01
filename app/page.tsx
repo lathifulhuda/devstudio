@@ -122,8 +122,9 @@ export default function Home() {
             </button>
 
             <a
-              href="https://wa.me/6281234567890"
+              href="https://wa.me/6285876222616?text=Halo%20DevStudio,%20saya%20tertarik%20untuk%20konsultasi"
               target="_blank"
+              rel="noopener noreferrer"
               className="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold px-4 py-2 rounded-xl transition shadow-lg shadow-cyan-500/20"
             >
               Konsultasi
@@ -197,30 +198,30 @@ export default function Home() {
               <div className={`p-4 rounded-2xl border flex justify-between items-center ${darkMode ? "bg-slate-950 border-slate-800" : "bg-slate-50 border-slate-200"}`}>
                 <div>
                   <span className="text-xs text-slate-400 font-bold block">BITCOIN (BTC)</span>
-                  <span className="text-lg font-black">Rp {cryptoData?.bitcoin.idr.toLocaleString("id-ID")}</span>
+                  <span className="text-lg font-black">Rp {cryptoData?.bitcoin?.idr?.toLocaleString("id-ID") ?? "0"}</span>
                 </div>
-                <span className={`text-xs font-bold ${cryptoData?.bitcoin.idr_24h_change! >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                  {cryptoData?.bitcoin.idr_24h_change.toFixed(2)}%
+                <span className={`text-xs font-bold ${(cryptoData?.bitcoin?.idr_24h_change ?? 0) >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                  {cryptoData?.bitcoin?.idr_24h_change?.toFixed(2) ?? "0.00"}%
                 </span>
               </div>
 
               <div className={`p-4 rounded-2xl border flex justify-between items-center ${darkMode ? "bg-slate-950 border-slate-800" : "bg-slate-50 border-slate-200"}`}>
                 <div>
                   <span className="text-xs text-slate-400 font-bold block">ETHEREUM (ETH)</span>
-                  <span className="text-lg font-black">Rp {cryptoData?.ethereum.idr.toLocaleString("id-ID")}</span>
+                  <span className="text-lg font-black">Rp {cryptoData?.ethereum?.idr?.toLocaleString("id-ID") ?? "0"}</span>
                 </div>
-                <span className={`text-xs font-bold ${cryptoData?.ethereum.idr_24h_change! >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                  {cryptoData?.ethereum.idr_24h_change.toFixed(2)}%
+                <span className={`text-xs font-bold ${(cryptoData?.ethereum?.idr_24h_change ?? 0) >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                  {cryptoData?.ethereum?.idr_24h_change?.toFixed(2) ?? "0.00"}%
                 </span>
               </div>
 
               <div className={`p-4 rounded-2xl border flex justify-between items-center ${darkMode ? "bg-slate-950 border-slate-800" : "bg-slate-50 border-slate-200"}`}>
                 <div>
                   <span className="text-xs text-slate-400 font-bold block">SOLANA (SOL)</span>
-                  <span className="text-lg font-black">Rp {cryptoData?.solana.idr.toLocaleString("id-ID")}</span>
+                  <span className="text-lg font-black">Rp {cryptoData?.solana?.idr?.toLocaleString("id-ID") ?? "0"}</span>
                 </div>
-                <span className={`text-xs font-bold ${cryptoData?.solana.idr_24h_change! >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
-                  {cryptoData?.solana.idr_24h_change.toFixed(2)}%
+                <span className={`text-xs font-bold ${(cryptoData?.solana?.idr_24h_change ?? 0) >= 0 ? "text-emerald-400" : "text-rose-400"}`}>
+                  {cryptoData?.solana?.idr_24h_change?.toFixed(2) ?? "0.00"}%
                 </span>
               </div>
             </div>
@@ -298,8 +299,9 @@ export default function Home() {
           </div>
 
           <a
-            href={`https://wa.me/6281234567890?text=Halo%20DevStudio,%20saya%20tertarik%20dengan%20estimasi%20layanan%20Rp%20${hitungHarga()}`}
+            href={`https://wa.me/6285876222616?text=Halo%20DevStudio,%20saya%20tertarik%20dengan%20estimasi%20layanan%20Rp%20${hitungHarga()}`}
             target="_blank"
+            rel="noopener noreferrer"
             className="block text-center bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold py-3.5 rounded-xl transition text-sm shadow-lg shadow-cyan-500/20"
           >
             Pesan Sekarang via WhatsApp
